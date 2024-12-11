@@ -16,7 +16,7 @@ def generate_sms_otp():
     try:
         client = Client('***', '***')
         message = client.messages.create(
-            body=f"Your OTP is {otp}",
+            body=f"Your Twilio verification code is: {otp}",
             from_='***',  # Twilio phone number
             to=phone_number
         )
